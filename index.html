@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Public Bookmarks</title>
+  <meta name="description" content="A public bookmark page hosted on GitHub Pages." />
+  <style>
+    :root {
+      --bg: #f5f1ea;
+      --paper: #fff9ef;
+      --ink: #1d1a16;
+      --muted: #665c4f;
+      --accent: #cc5a2b;
+      --accent-soft: #f8e3d9;
+      --ring: #2f6f5f;
+      --shadow: 0 10px 30px rgba(29, 26, 22, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Avenir Next", "Trebuchet MS", "Gill Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 10%, #f9dcc7 0, rgba(249, 220, 199, 0) 35%),
+        radial-gradient(circle at 88% 88%, #dcefe3 0, rgba(220, 239, 227, 0) 38%),
+        linear-gradient(135deg, #efe6d8 0%, #f8f3eb 55%, #f1e7da 100%);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(780px, 100%);
+      background: linear-gradient(180deg, #fffdf9 0%, var(--paper) 100%);
+      border: 1px solid #eadcc7;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: rise 650ms ease-out both;
+    }
+
+    .header {
+      padding: 26px 26px 20px;
+      border-bottom: 1px solid #eadcc7;
+      background: repeating-linear-gradient(
+        -45deg,
+        rgba(204, 90, 43, 0.08),
+        rgba(204, 90, 43, 0.08) 8px,
+        rgba(204, 90, 43, 0.03) 8px,
+        rgba(204, 90, 43, 0.03) 16px
+      );
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.4rem, 3.8vw, 2.2rem);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      border: 1px solid #eadcc7;
+      border-radius: 14px;
+      background: #fffefb;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      animation: fadeIn 500ms ease both;
+    }
+
+    .item:nth-child(1) {
+      animation-delay: 120ms;
+    }
+
+    .item a {
+      display: block;
+      padding: 16px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .item-title {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .item-url {
+      color: var(--muted);
+      font-size: 0.92rem;
+      overflow-wrap: anywhere;
+    }
+
+    .item:hover,
+    .item:focus-within {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 20px rgba(204, 90, 43, 0.15);
+    }
+
+    .item a:focus-visible {
+      outline: 3px solid var(--ring);
+      outline-offset: -3px;
+      border-radius: 12px;
+    }
+
+    .footer {
+      padding: 14px 20px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .header {
+        padding: 20px 18px 16px;
+      }
+
+      .list {
+        padding: 12px;
+      }
+
+      .item a {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <h1>Public Bookmarks</h1>
+      <p>A simple link library hosted from this GitHub repo.</p>
+    </header>
+
+    <ul class="list">
+      <li class="item">
+        <a href="https://www.ccreadbible.org/chinesebible/nab_nabhtm/bible_60_Ch_8_romans.html" target="_blank" rel="noopener noreferrer">
+          <span class="item-title">Romans 8 (Chinese Bible Study Page)</span>
+          <span class="item-url">https://www.ccreadbible.org/chinesebible/nab_nabhtm/bible_60_Ch_8_romans.html</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer class="footer">Add more bookmarks by duplicating an <code>li</code> block in this file.</footer>
+  </main>
+</body>
+</html>
