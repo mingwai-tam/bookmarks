@@ -29,9 +29,10 @@
 
   function getVisibleBookmarks() {
     const query = searchEl.value.trim();
+    const hasQuery = query.length > 0;
 
     return allBookmarks.filter((bookmark) => {
-      const categoryMatch = activeCategory === "All" || bookmark.category === activeCategory;
+      const categoryMatch = hasQuery || activeCategory === "All" || bookmark.category === activeCategory;
       const queryMatch = includesQuery(bookmark, query);
       return categoryMatch && queryMatch;
     });

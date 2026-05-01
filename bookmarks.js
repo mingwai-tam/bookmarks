@@ -1,6 +1,12 @@
 window.BOOKMARKS = [
   // ── Bible Study ──────────────────────────────────────────────────────────────
   {
+    title: "思高漢英繁體聖經 (NAB-Vatican version)",
+    url: "https://www.ccreadbible.org/chinesebible/nab_nabhtm",
+    category: "Bible Study",
+    tags: ["romans", "chinese", "nab", "Catholic"]
+  },
+  {
     title: "Romans 8 — Chinese NAB (Catholic)",
     url: "https://www.ccreadbible.org/chinesebible/nab_nabhtm/bible_60_Ch_8_romans.html",
     category: "Bible Study",
@@ -115,6 +121,12 @@ window.BOOKMARKS = [
     tags: ["crc", "crc32", "checksum", "dev tool"]
   },
   {
+    title: "CRC Calculator (crccalc.com)",
+    url: "https://crccalc.com/?crc=123456789&method=&datatype=hex&outtype=hex",
+    category: "Developer Tools",
+    tags: ["crc", "crc32", "crc16", "checksum", "calculator"]
+  },
+  {
     title: "Hex/Decimal/Binary Converter",
     url: "https://www.rapidtables.com/convert/number/hex-dec-bin-converter.html",
     category: "Developer Tools",
@@ -149,6 +161,12 @@ window.BOOKMARKS = [
     url: "https://www.calculator.net/financial-calculator.html",
     category: "Developer Tools",
     tags: ["calculator", "financial", "interest", "loan"]
+  },
+  {
+    title: "Luhn Check Digit Calculator",
+    url: "https://simplycalc.com/luhn-calculate.php",
+    category: "Developer Tools",
+    tags: ["luhn", "checksum", "card", "validation", "calculator"]
   },
 
   // ── Chinese ──────────────────────────────────────────────────────────────────
@@ -254,7 +272,7 @@ window.BOOKMARKS = [
     title: "Merriam-Webster Dictionary",
     url: "https://www.merriam-webster.com",
     category: "English",
-    tags: ["dictionary", "english", "thesaurus", "american"]
+    tags: ["dictionary", "english", "thesaurus", "american", "mw", "merriam", "webster"]
   },
   {
     title: "Dictionary.com",
@@ -293,6 +311,12 @@ window.BOOKMARKS = [
     url: "https://www.ventusky.com",
     category: "Weather",
     tags: ["weather", "forecast", "map", "temperature", "global"]
+  },
+  {
+    title: "AQICN — Kwai Chung Air Quality",
+    url: "https://aqicn.org/city/hongkong/kwai-chung/hk/",
+    category: "Weather",
+    tags: ["aqi", "air quality", "pollution", "hong kong", "kwai chung"]
   },
 
   // ── Maps ─────────────────────────────────────────────────────────────────────
