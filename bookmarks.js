@@ -197,9 +197,9 @@ window.BOOKMARKS = [
 
   // ── Cantonese ────────────────────────────────────────────────────────────────
   {
-    title: "Pronunciation Studio (My Account)",
+    title: "Pronunciation Studio",
     url: "https://pronunciationstudio.com/my-account/",
-    category: "Cantonese",
+    category: "English",
     tags: ["pronunciation", "learning", "course", "audio"]
   },
   {
