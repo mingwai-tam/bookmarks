@@ -1,4 +1,43 @@
 (function () {
+  const THEME_STORAGE_KEY = "bookmark-theme";
+  const themeEl = document.getElementById("theme-select");
+  const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function getStoredTheme() {
+    const value = localStorage.getItem(THEME_STORAGE_KEY);
+    return value === "light" || value === "dark" || value === "auto" ? value : "auto";
+  }
+
+  function applyTheme(mode) {
+    document.documentElement.setAttribute("data-theme", mode);
+    if (mode === "auto") {
+      document.documentElement.removeAttribute("data-theme");
+    }
+  }
+
+  function initializeTheme() {
+    if (!themeEl) {
+      return;
+    }
+
+    const initialMode = getStoredTheme();
+    themeEl.value = initialMode;
+    applyTheme(initialMode);
+
+    themeEl.addEventListener("change", () => {
+      const nextMode = themeEl.value;
+      localStorage.setItem(THEME_STORAGE_KEY, nextMode);
+      applyTheme(nextMode);
+    });
+
+    // Keep Auto mode synced with OS theme changes.
+    systemThemeQuery.addEventListener("change", () => {
+      if (themeEl.value === "auto") {
+        applyTheme("auto");
+      }
+    });
+  }
+
   const allBookmarks = Array.isArray(window.BOOKMARKS) ? window.BOOKMARKS : [];
   const categories = ["All", ...new Set(allBookmarks.map((bookmark) => bookmark.category).filter(Boolean))];
 
@@ -105,6 +144,7 @@
 
   searchEl.addEventListener("input", renderList);
 
+  initializeTheme();
   renderTabs();
   renderList();
 })();
