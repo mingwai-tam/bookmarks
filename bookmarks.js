@@ -30,6 +30,24 @@ window.BOOKMARKS = [
     category: "Bible Study",
     tags: ["bible", "douay-rheims", "vulgate", "latin", "Catholic"]
   },
+  {
+    title: "YouVersion — 新標點和合本 (CUNP, 和合本)",
+    url: "https://www.bible.com/versions/46-cuv-traditional-chinese-union-version-traditional",
+    category: "Bible Study",
+    tags: ["bible", "chinese", "和合本", "cuv", "interdenominational"]
+  },
+  {
+    title: "YouVersion — 和合本修訂版 (RCUV, 和修本)",
+    url: "https://www.bible.com/versions/139-rcuvss-%E8%81%96%E7%B6%93-%E5%92%8C%E5%90%88%E6%9C%AC%E4%BF%AE%E8%A8%82%E7%89%88",
+    category: "Bible Study",
+    tags: ["bible", "chinese", "和修本", "rcuv", "interdenominational"]
+  },
+  {
+    title: "Logos Web App — Bible Study",
+    url: "https://app.logos.com/",
+    category: "Bible Study",
+    tags: ["bible", "study", "library", "theology", "software"]
+  },
 
   // ── AI ───────────────────────────────────────────────────────────────────────
   {
@@ -71,6 +89,68 @@ window.BOOKMARKS = [
     tags: ["time", "timezone", "world clock", "map"]
   },
 
+  // ── Developer Tools ──────────────────────────────────────────────────────────
+  {
+    title: "SHA256 Hash Tool",
+    url: "https://emn178.github.io/online-tools/sha256.html",
+    category: "Developer Tools",
+    tags: ["hash", "sha256", "security", "dev tool"]
+  },
+  {
+    title: "SHA1 Hash Tool",
+    url: "https://emn178.github.io/online-tools/sha1.html",
+    category: "Developer Tools",
+    tags: ["hash", "sha1", "security", "dev tool"]
+  },
+  {
+    title: "MD5 Hash Tool",
+    url: "https://emn178.github.io/online-tools/md5.html",
+    category: "Developer Tools",
+    tags: ["hash", "md5", "checksum", "dev tool"]
+  },
+  {
+    title: "CRC32 Tool",
+    url: "https://emn178.github.io/online-tools/crc32.html",
+    category: "Developer Tools",
+    tags: ["crc", "crc32", "checksum", "dev tool"]
+  },
+  {
+    title: "Hex/Decimal/Binary Converter",
+    url: "https://www.rapidtables.com/convert/number/hex-dec-bin-converter.html",
+    category: "Developer Tools",
+    tags: ["hex", "decimal", "binary", "converter", "dev tool"]
+  },
+  {
+    title: "QR Code Generator",
+    url: "https://www.qr-code-generator.com/",
+    category: "Developer Tools",
+    tags: ["qr", "generator", "barcode", "dev tool"]
+  },
+  {
+    title: "Barcode Generator",
+    url: "https://www.barcodesinc.com/generator/index.php",
+    category: "Developer Tools",
+    tags: ["barcode", "generator", "code128", "dev tool"]
+  },
+  {
+    title: "Desmos Scientific Calculator",
+    url: "https://www.desmos.com/scientific",
+    category: "Developer Tools",
+    tags: ["calculator", "scientific", "math", "expression"]
+  },
+  {
+    title: "Wolfram|Alpha",
+    url: "https://www.wolframalpha.com/",
+    category: "Developer Tools",
+    tags: ["calculator", "symbolic", "math", "query"]
+  },
+  {
+    title: "Calculator.net Financial Calculator",
+    url: "https://www.calculator.net/financial-calculator.html",
+    category: "Developer Tools",
+    tags: ["calculator", "financial", "interest", "loan"]
+  },
+
   // ── Chinese ──────────────────────────────────────────────────────────────────
   {
     title: "Zdic — 汉典 Chinese Dictionary",
@@ -89,6 +169,12 @@ window.BOOKMARKS = [
     url: "https://dict.revised.moe.edu.tw",
     category: "Chinese",
     tags: ["dictionary", "chinese", "traditional", "taiwan", "academic"]
+  },
+  {
+    title: "CUHK 漢語多功能字庫",
+    url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/",
+    category: "Chinese",
+    tags: ["dictionary", "chinese", "cuhk", "character", "academic"]
   },
 
   // ── Cantonese ────────────────────────────────────────────────────────────────
