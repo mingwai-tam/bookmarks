@@ -1,0 +1,232 @@
+:root {
+  --bg: #f5f1ea;
+  --paper: #fff9ef;
+  --ink: #1d1a16;
+  --muted: #665c4f;
+  --accent: #cc5a2b;
+  --accent-soft: #f8e3d9;
+  --ring: #2f6f5f;
+  --shadow: 0 10px 30px rgba(29, 26, 22, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Avenir Next", "Trebuchet MS", "Gill Sans", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 10%, #f9dcc7 0, rgba(249, 220, 199, 0) 35%),
+    radial-gradient(circle at 88% 88%, #dcefe3 0, rgba(220, 239, 227, 0) 38%),
+    linear-gradient(135deg, #efe6d8 0%, #f8f3eb 55%, #f1e7da 100%);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(820px, 100%);
+  background: linear-gradient(180deg, #fffdf9 0%, var(--paper) 100%);
+  border: 1px solid #eadcc7;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  animation: rise 650ms ease-out both;
+}
+
+.header {
+  padding: 26px 26px 20px;
+  border-bottom: 1px solid #eadcc7;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(204, 90, 43, 0.08),
+    rgba(204, 90, 43, 0.08) 8px,
+    rgba(204, 90, 43, 0.03) 8px,
+    rgba(204, 90, 43, 0.03) 16px
+  );
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3.8vw, 2.2rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.controls {
+  padding: 16px;
+  border-bottom: 1px solid #eadcc7;
+  display: grid;
+  gap: 12px;
+  background: rgba(255, 254, 251, 0.85);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab {
+  border: 1px solid #deccb3;
+  border-radius: 999px;
+  background: #fffaf2;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.tab:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
+.tab.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.tab:focus-visible,
+.search-wrap input:focus-visible,
+.item a:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.search-wrap {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.search-wrap input {
+  width: 100%;
+  border: 1px solid #deccb3;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 1rem;
+  background: #fffefb;
+  padding: 11px 12px;
+  color: var(--ink);
+}
+
+.result-count {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.item {
+  border: 1px solid #eadcc7;
+  border-radius: 14px;
+  background: #fffefb;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  animation: fadeIn 450ms ease both;
+}
+
+.item a {
+  display: block;
+  padding: 16px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.item-title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.item-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-bottom: 8px;
+}
+
+.item-url {
+  color: var(--muted);
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+.item:hover,
+.item:focus-within {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 20px rgba(204, 90, 43, 0.15);
+}
+
+.empty {
+  margin: 0;
+  padding: 0 16px 16px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.footer {
+  padding: 14px 20px 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    padding: 20px 18px 16px;
+  }
+
+  .controls {
+    padding: 12px;
+  }
+
+  .list {
+    padding: 12px;
+  }
+
+  .item a {
+    padding: 14px;
+  }
+}

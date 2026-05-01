@@ -2,9 +2,30 @@
 
 This repository is set up as a public bookmark page for GitHub Pages.
 
+## Features
+
+- Category tabs
+- Live search across title, URL, category, and tags
+- Multi-file structure (`index.html`, `styles.css`, `bookmarks.js`, `script.js`)
+
 ## Included test bookmark
 
 - [Romans 8 (Chinese Bible Study Page)](https://www.ccreadbible.org/chinesebible/nab_nabhtm/bible_60_Ch_8_romans.html)
+
+## Add more bookmarks
+
+Edit `bookmarks.js` and add objects in this format:
+
+```js
+{
+	title: "Bookmark title",
+	url: "https://example.com",
+	category: "Category Name",
+	tags: ["tag1", "tag2"]
+}
+```
+
+Tabs are created automatically from `category` values.
 
 ## Publish on GitHub Pages
 
